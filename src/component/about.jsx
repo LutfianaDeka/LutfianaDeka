@@ -41,9 +41,9 @@ export default function About() {
                 During my studies, I have worked on various final projects,
                 including UI/UX design, website and landing page development, as
                 well as creating applications using the .NET Framework and
-                microcontroller-based projects. These experiences have broadened
-                my understanding of the system development lifecycle—from design
-                to implementation—and continue to motivate me to learn and
+                microcontroller based projects. These experiences have broadened
+                my understanding of the system development lifecycle from design
+                to implementation and continue to motivate me to learn and
                 enhance my skills in technology.
               </p>
             </div>
