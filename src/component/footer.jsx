@@ -14,7 +14,7 @@ export default function Footer() {
             </a>
             <a
               className="gmail transition-all duration-300 hover:-translate-y-[2px] hover:text-indigo-200"
-              href="mailto:lutfianadeka00@gmail.com"
+              href="mailto:lutfianadeka@students.amikom.ac.id"
             >
               <i className="bi bi-envelope"></i>
             </a>

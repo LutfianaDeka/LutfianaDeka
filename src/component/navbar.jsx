@@ -68,28 +68,28 @@ function Navbar() {
             <nav className="flex flex-col gap-2 text-base max-xs:text-xs pt-20 max-xs:pt-10 max-md:pt-16 top-0 text-[#090035]">
               <a
                 className="px-5 py-2 hover:bg-indigo-900 hover:text-white transition-colors duration-200"
-                href=""
+                href="#home"
                 onClick={closeSidebar}
               >
                 Home
               </a>
               <a
                 className="px-5 py-2 hover:bg-indigo-900 hover:text-white transition-colors duration-200"
-                href=""
+                href="#about"
                 onClick={closeSidebar}
               >
                 About
               </a>
               <a
                 className="px-5 py-2 hover:bg-indigo-900 hover:text-white transition-colors duration-200"
-                href=""
+                href="#portofolio"
                 onClick={closeSidebar}
               >
                 Portofolio
               </a>
               <a
                 className="px-5 py-2 hover:bg-indigo-900 hover:text-white transition-colors duration-200"
-                href=""
+                href="#footer"
                 onClick={closeSidebar}
               >
                 Contact
