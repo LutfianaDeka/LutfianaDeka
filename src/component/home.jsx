@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Tombol */}
         <a
-          href="/CV - Lutfiana Deka Nurhayati.pdf"
+          href="/CV.pdf"
           download="CV - Lutfiana Deka Nurhayati.pdf"
           className="inline-flex items-center justify-center gap-2 mt-6 bg-white text-[#090035] font-semibold py-2 px-6 rounded-full shadow-xl hover:-translate-y-1 hover:bg-indigo-200 transition-all duration-300 max-md:py-1 max-md:px-6 max-md:mt-6 max-xs:text-xs max-xs:mt-4"
         >
