@@ -29,7 +29,7 @@ export default function Portofolio() {
     {
       title: "PaduPadan",
       image: "/project/PaduPadan.png",
-      desc: "Website mix & match outfit yang memungkinkan pengguna membuat dan mengelola style pribadi dengan Supabase.",
+      desc: "Website mix & match outfit yang memungkinkan pengguna membuat dan mengelola style pribadi, pengguna juga bisa melihat berbagai inspirasi style outfit dari pengguna lain.",
       link: "https://padu-padan-amicta.vercel.app/",
       tool: ["Figma", "HTML", "CSS", "Tailwind CSS", "React", "Supabase"],
     },
