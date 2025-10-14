@@ -18,10 +18,7 @@ const SKILLS = [
 export default function About() {
   return (
     // --> Latar belakang gradien yang modern dan lembut
-    <section
-      id="about"
-      className="about bg-white py-6"
-    >
+    <section id="about" className="about bg-white py-6">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <h2 className="text-xl font-bold text-center text-[#090035] pb-6">
           About Me
@@ -36,15 +33,18 @@ export default function About() {
             </h3>
             <div className="text-sm leading-relaxed text-slate-600 space-y-4">
               <p>
-                Hi! I'm an informatics student.. <br /> I enjoy building
-                interactive websites, especially on the frontend, and I'm also
-                interested in backend development. I enjoy exploring machine
-                learning as well.
+                Hi! I am a final-year Informatics student with a strong interest
+                in web development, particularly in frontend, as well as a
+                growing enthusiasm for backend and machine learning...
               </p>
               <p>
-                I'm always happy and motivated to learn new things. I enjoy
-                taking on challenges in technology development and I enjoy
-                creating and improving my ideas.
+                During my studies, I have worked on various final projects,
+                including UI/UX design, website and landing page development, as
+                well as creating applications using the .NET Framework and
+                microcontroller based projects. These experiences have broadened
+                my understanding of the system development lifecycle from design
+                to implementation and continue to motivate me to learn and
+                enhance my skills in technology.
               </p>
             </div>
           </div>
