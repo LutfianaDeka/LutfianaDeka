@@ -51,43 +51,42 @@ export default function Home() {
           <p className="font-light text-xl max-md:text-base cursor-pointer max-xs:text-xs">
             Follow me
           </p>
-          <div className="ikon text-2xl flex gap-3 max-md:gap-2 max-md:text-xl max-xs:text-xs">
-            {/* <a
-              href="https://instagram.com"
-              className="relative group transition-all duration-300 hover:-translate-y-1 hover:text-[#893c4d]"
-            >
-              <i className="bi bi-instagram"></i>
-            </a> */}
+          <div className="ikon text-2xl flex gap-3 max-md:gap-2 max-md:text-xl max-xs:text-xs z-20">
             <a
               href="https://github.com/LutfianaDeka"
-              className="relative group transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
             >
               <i className="bi bi-github"></i>
             </a>
             <a
               href="https://linkedin.com"
-              className="relative group transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
             >
               <i className="bi bi-linkedin"></i>
             </a>
           </div>
         </div>
+        <div className="btn-download mt-6">
+          {/* Tombol */}
+          <a
+            href="/CV.pdf"
+            download="CV - Lutfiana Deka Nurhayati.pdf"
+            className="inline-flex items-center justify-center gap-2  bg-white text-[#090035] font-semibold py-2 px-6 rounded-full shadow-xl hover:-translate-y-1 hover:bg-indigo-200 transition-all duration-300 max-md:py-1 max-md:px-6 max-md:mt-6 max-xs:text-xs max-xs:mt-4"
+          >
+            {/* Animasi Lingkaran Glow */}
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 to-purple-500 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300"></span>
 
-        {/* Tombol */}
-        <a
-          href="/CV.pdf"
-          download="CV - Lutfiana Deka Nurhayati.pdf"
-          className="inline-flex items-center justify-center gap-2 mt-6 bg-white text-[#090035] font-semibold py-2 px-6 rounded-full shadow-xl hover:-translate-y-1 hover:bg-indigo-200 transition-all duration-300 max-md:py-1 max-md:px-6 max-md:mt-6 max-xs:text-xs max-xs:mt-4"
-        >
-          {/* Animasi Lingkaran Glow */}
-          <span className="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-400 to-purple-500 opacity-0 group-hover:opacity-20 blur-lg transition-opacity duration-300"></span>
+            {/* Ikon Download */}
+            <i className="bi bi-download text-lg transition-transform duration-300 group-hover:-translate-y-1"></i>
 
-          {/* Ikon Download */}
-          <i className="bi bi-download text-lg transition-transform duration-300 group-hover:-translate-y-1"></i>
-
-          {/* Teks */}
-          <span className="relative z-10">Download CV</span>
-        </a>
+            {/* Teks */}
+            <span className="relative z-10">Download CV</span>
+          </a>
+        </div>
       </div>
     </div>
   );
