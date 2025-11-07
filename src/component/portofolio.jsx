@@ -8,15 +8,9 @@ import { Pagination } from "swiper/modules";
 export default function Portofolio() {
   const [selectedProject, setSelectedProject] = useState(null);
 
+    // Cegah scroll saat popup terbuka
   useEffect(() => {
-    if (selectedProject) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
+    document.body.classList.toggle("overflow-hidden", !!selectedProject);
   }, [selectedProject]);
 
   const projects = [
@@ -87,8 +81,7 @@ export default function Portofolio() {
             modules={[Pagination]}
             pagination={{
               clickable: true,
-              bulletClass:
-                "swiper-pagination-bullet !bg-[#090035]/50 !opacity-100 transition-all",
+              bulletClass: "swiper-pagination-bullet !bg-gray-300 !opacity-100",
               bulletActiveClass: "!bg-[#090035] !opacity-100",
             }}
             spaceBetween={30}
