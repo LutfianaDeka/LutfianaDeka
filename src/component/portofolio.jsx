@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+// import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 export default function Portofolio() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -58,17 +59,17 @@ export default function Portofolio() {
   ];
 
   return (
-    <section className="bg-white py-12 relative">
-      <div className="container mx-auto px-4 relative">
+    <section className="bg-white py-12 relative ">
+      <div className="container mx-auto px-4 relative w-[90vw]">
         <h2 className="text-xl font-bold text-center text-[#090035] mb-8">
           Portofolio
         </h2>
 
         {/* Navigasi Swiper */}
         <div className="relative flex items-center">
-          <div className="swiper-button-prev !text-[#090035] !left-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div>
+          {/* <div className="swiper-button-prev !text-[#090035] !left-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div> */}
 
-          <Swiper
+          {/* <Swiper
             modules={[Navigation]}
             navigation={{
               nextEl: ".swiper-button-next",
@@ -81,10 +82,26 @@ export default function Portofolio() {
               1024: { slidesPerView: 3 },
             }}
             className="mySwiper w-full"
+          > */}
+          <Swiper
+            modules={[Pagination]}
+            pagination={{
+              clickable: true,
+              bulletClass:
+                "swiper-pagination-bullet !bg-[#090035]/50 !opacity-100 transition-all",
+              bulletActiveClass: "!bg-[#090035] !opacity-100",
+            }}
+            spaceBetween={30}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="mySwiper w-full t-4"
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <div className="box-porto bg-white flex flex-col shadow-lg border border-[#090035]/20 rounded overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="box-porto bg-white flex flex-col shadow-lg border border-[#090035]/20 rounded overflow-hidden hover:shadow-xl transition-all duration-300 mb-8">
                   <div className="gmbr relative w-full overflow-hidden p-2">
                     <img
                       src={project.image}
@@ -109,13 +126,13 @@ export default function Portofolio() {
             ))}
           </Swiper>
 
-          <div className="swiper-button-next !text-[#090035] !right-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div>
+          {/* <div className="swiper-button-next !text-[#090035] !right-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div> */}
         </div>
 
         {/* Popup Detail Project */}
         {selectedProject && (
           <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative animate-fadeIn">
+            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative animate-fadeIn mx-4">
               <button
                 className="absolute top-1 right-2 text-xl text-gray-600 hover:text-black"
                 onClick={() => setSelectedProject(null)}
