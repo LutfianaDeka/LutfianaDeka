@@ -124,7 +124,12 @@ export default function Portofolio() {
               </button>
 
               <div className="mb-4">
-                {selectedProject.video ? (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full rounded border border-[#090035]/20"
+                />
+                {/* {selectedProject.video ? (
                   <video
                     src={selectedProject.video}
                     controls
@@ -136,7 +141,7 @@ export default function Portofolio() {
                     alt={selectedProject.title}
                     className="w-full rounded border border-[#090035]/20"
                   />
-                )}
+                )} */}
               </div>
 
               <h3 className="text-lg max-md:text-sm font-semibold text-[#090035] mb-2">
