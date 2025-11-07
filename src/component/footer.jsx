@@ -24,7 +24,7 @@ export default function Footer() {
             </a>
             <a
               className="instagram transition-all duration-300 hover:-translate-y-[2px] hover:text-indigo-200"
-              href="https://www.instagram.com/lutfianadeka17"
+              href="https://www.instagram.com/dekkaee"
               target="_blank"
               rel="noopener noreferrer"
             >
