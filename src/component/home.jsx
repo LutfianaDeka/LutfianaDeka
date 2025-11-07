@@ -61,7 +61,7 @@ export default function Home() {
               <i className="bi bi-github"></i>
             </a>
             <a
-              href="https://linkedin.com"
+              href="http://linkedin.com/in/lutfiana-deka17"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
