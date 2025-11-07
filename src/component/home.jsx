@@ -38,7 +38,7 @@ export default function Home() {
       />
 
       {/* Teks Intro */}
-      <div className="intro text-white ml-10 max-xs:mx-0 z-10 max-md:text-center">
+      <div className="intro text-white ml-10 max-md:mx-0 z-10 max-md:text-center">
         <p className="text-2xl font-extralight max-md:text-base max-md:pt-8 max-xs:pt-2 max-xs:text-xs cursor-pointer">
           Hello, It's me
         </p>
