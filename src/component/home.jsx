@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div
-      className="px-10 relative pt-20 bg-[#090035] flex max-md:flex-col items-center justify-center h-screen overflow-hidden transition-all duration-700 "
+      className="px-10 relative pt-20 bg-[#090035] flex max-md:flex-col max-md:px-10 items-center justify-center h-screen overflow-hidden transition-all duration-700 "
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
