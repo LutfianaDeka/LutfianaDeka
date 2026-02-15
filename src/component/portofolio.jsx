@@ -8,7 +8,7 @@ import { Pagination } from "swiper/modules";
 export default function Portofolio() {
   const [selectedProject, setSelectedProject] = useState(null);
 
-    // Cegah scroll saat popup terbuka
+  // Cegah scroll saat popup terbuka
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !!selectedProject);
   }, [selectedProject]);
@@ -49,6 +49,20 @@ export default function Portofolio() {
       desc: "Aplikasi berbasis web yang membantu pengguna memprediksi risiko sindrom metabolik menggunakan model machine learning. Frontend dibangun dengan React + Tailwind CSS dan di-hosting di Vercel, sedangkan API-nya awalnya di-hosting di Replit (saat ini non-aktif karena batas akun gratis).",
       link: "https://mets-predict.vercel.app/",
       tool: ["React", "Tailwind", "Axios", "Flask", "Replit"],
+    },
+    {
+      title: "podcastQu",
+      image: "/project/podcastQu.png",
+      desc: "Sebuah UI/UX aplikasi podcast sederhana yang memungkinkan pengguna untuk mendengarkan berbagai episode podcast dengan antarmuka yang menarik",
+      link: "https://www.figma.com/design/ggxAebXzyJPOqE0pxczXWD/Mockup-PodcastQ?node-id=0-1&t=h4lzXEVekgfCQO10-1",
+      tool: ["Figma"],
+    },
+    {
+      title: "Kos Manajemen",
+      image: "/project/kos.png",
+      desc: "Aplikasi Sistem Manajemen Kosan yang dilengkapi dengan berbagai fitur, termasuk pengelolaan data kamar, pengelolaan data transaksi, serta proses penyewaan dan pembayaran kamar untuk penyewa. Dengan sistem yang efisien dan user-friendly, pemilik kos dapat dengan mudah mengelola informasi penyewa dan transaksi keuangan, sementara penyewa dapat melakukan pemesanan kamar dan pembayaran secara praktis. ",
+      link: "https://www.figma.com/proto/tX3cRhYOrS6pcGmoDIF3li/Desain-KOS-Manajemen?node-id=0-1&t=ub1uBYtQVMlKQdTu-1",
+      tool: ["Figma"],
     },
   ];
 
@@ -99,7 +113,7 @@ export default function Portofolio() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full object-contain border border-[#090035]/20 rounded"
+                      className="w-full h-46 object-contain border border-[#090035]/20 rounded"
                     />
                   </div>
 
@@ -137,7 +151,7 @@ export default function Portofolio() {
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full rounded border border-[#090035]/20"
+                  className="w-full h-48 object-contain rounded border border-[#090035]/20"
                 />
                 {/* {selectedProject.video ? (
                   <video
