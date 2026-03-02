@@ -72,15 +72,15 @@ export default function Home() {
         </div>
         <div className="btn-download mt-6">
           <a
-            href="/CV.pdf"
-            download="CV - Lutfiana Deka Nurhayati.pdf"
+            href="/Resume.pdf"
+            download="RESUME LUTFIANA.pdf"
             className="relative group inline-flex items-center justify-center gap-2 
              bg-white text-[#090035] font-semibold py-2 px-6 rounded-full 
              shadow-xl transition-all duration-300 
              hover:-translate-y-1 hover:bg-indigo-200"
           >
             <i className="bi bi-download relative z-10 text-lg"></i>
-            <span className="relative z-10">Download CV</span>
+            <span className="relative z-10">Resume</span>
           </a>
         </div>
       </div>
