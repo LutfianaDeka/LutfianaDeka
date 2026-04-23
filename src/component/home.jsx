@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div
-      className="px-10 relative pt-20 bg-[#090035] flex max-md:flex-col max-md:px-10 items-center justify-center h-screen overflow-hidden transition-all duration-700 "
+      className="left-0 px-10 pt-20 bg-[var(--blue)] flex max-md:flex-col max-md:px-10 items-center justify-center h-screen overflow-hidden transition-all duration-700 "
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
@@ -48,9 +48,9 @@ export default function Home() {
 
         {/* Sosmed */}
         <div className="sosmed flex flex-row gap-5 max-md:gap-3 pt-10 max-md:pt-5 max-xs:pt-3 items-center max-md:justify-center ">
-          <p className="font-light text-xl max-md:text-base cursor-pointer max-xs:text-xs">
+          {/* <p className="font-light text-xl max-md:text-base cursor-pointer max-xs:text-xs">
             Follow me
-          </p>
+          </p> */}
           <div className="ikon text-2xl flex gap-3 max-md:gap-2 max-md:text-xl max-xs:text-xs z-20">
             <a
               href="https://github.com/LutfianaDeka"
@@ -68,16 +68,45 @@ export default function Home() {
             >
               <i className="bi bi-linkedin"></i>
             </a>
+            <a
+              href="https://www.instagram.com/dekkaee"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/6282328531954"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:-translate-y-1 hover:text-indigo-200"
+            >
+              <i className="bi bi-whatsapp"></i>
+            </a>
           </div>
         </div>
-        <div className="btn-download mt-6">
+        <div className="btn-actions mt-8 flex flex-wrap gap-4 max-md:justify-center">
+          {/* Primary CTA: Arahkan ke section project/kontak */}
+          <a
+            href="#portofolio" // Ganti dengan ID section tujuanmu
+            className="relative group inline-flex items-center justify-center gap-2 
+      bg-white text-[var(--blue)] font-semibold py-1 px-4 rounded-lg 
+      shadow-[var(--blue)] transition-all duration-300 
+      hover:scale-105 hover:bg-indigo-200"
+          >
+            <i className="bi bi-rocket-takeoff relative z-10 text-lg"></i>
+            <span className="relative z-10">Lihat Karya</span>
+          </a>
+
+          {/* Secondary CTA: Download Resume (Kode aslimu dengan sedikit penyesuaian) */}
           <a
             href="/Resume.pdf"
             download="RESUME LUTFIANA.pdf"
             className="relative group inline-flex items-center justify-center gap-2 
-             bg-white text-[#090035] font-semibold py-2 px-6 rounded-full 
-             shadow-xl transition-all duration-300 
-             hover:-translate-y-1 hover:bg-indigo-200"
+      bg-transparent border-2 border-white text-white font-semibold py-1 px-4 rounded-lg 
+      transition-all duration-300 
+      hover:scale-105 hover:bg-white hover:text-[var(--blue)]"
           >
             <i className="bi bi-download relative z-10 text-lg"></i>
             <span className="relative z-10">Resume</span>

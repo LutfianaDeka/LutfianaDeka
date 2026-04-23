@@ -1,33 +1,66 @@
 import "./App.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// tambahkan useLocation di sini
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 import Navbar from "./component/navbar";
 import Home from "./component/home";
 import About from "./component/about";
 import Footer from "./component/footer";
 import Portofolio from "./component/portofolio";
+import Pengalaman from "./component/pengalaman";
+import DetailPengalaman from "./component/detailpengalaman";
+
+// kita pisahkan isi routes ke komponen baru agar bisa menggunakan useLocation()
+function AnimatedRoutes() {
+  const location = useLocation();
+
+  return (
+    // mode="wait" memastikan halaman lama hilang dulu baru halaman baru muncul
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route
+          path="/"
+          element={
+            <>
+              <main className="flex flex-col gap-10 flex-grow pt-10">
+                <section id="home">
+                  <Home />
+                </section>
+                <section id="about">
+                  <About />
+                </section>
+                <section id="portofolio">
+                  <Portofolio />
+                </section>
+                <section id="pengalaman">
+                  <Pengalaman />
+                </section>
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/detail-pengalaman" element={<DetailPengalaman />} />
+      </Routes>
+    </AnimatePresence>
+  );
+}
+
 function App() {
   return (
-    <>
-      <Router>
-        {" "}
-        <section id="navbar">
-          <Navbar />
-        </section>
-        <section id="home">
-          <Home />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="portofolio">
-          <Portofolio />
-        </section>
-        <section id="footer">
-          <Footer />
-        </section>
-      </Router>
-    </>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <AnimatedRoutes />
+      </div>
+    </Router>
   );
 }
 

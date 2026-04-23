@@ -1,14 +1,9 @@
 import { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-// import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
 
 export default function Portofolio() {
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Cegah scroll saat popup terbuka
+  // cegah scroll saat popup terbuka
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", !!selectedProject);
   }, [selectedProject]);
@@ -46,12 +41,12 @@ export default function Portofolio() {
     {
       title: "Mets Prediction",
       image: "/project/mets.png",
-      desc: "Aplikasi berbasis web yang membantu pengguna memprediksi risiko sindrom metabolik menggunakan model machine learning. Frontend dibangun dengan React + Tailwind CSS dan di-hosting di Vercel, sedangkan API-nya awalnya di-hosting di Replit (saat ini non-aktif karena batas akun gratis).",
+      desc: "Aplikasi berbasis web yang dirancang untuk membantu pengguna melakukan deteksi dini terhadap risiko Sindrom Metabolik dengan integrasi model Random Forest",
       link: "https://mets-predict.vercel.app/",
-      tool: ["React", "Tailwind", "Axios", "Flask", "Replit"],
+      tool: ["React", "Tailwind", "Axios", "Flask"],
     },
     {
-      title: "podcastQu",
+      title: "PodcastQu",
       image: "/project/podcastQu.png",
       desc: "UI/UX Aplikasi Podcast sederhana yang memungkinkan pengguna untuk mendengarkan berbagai episode podcast dengan antarmuka yang menarik",
       link: "https://www.figma.com/design/ggxAebXzyJPOqE0pxczXWD/Mockup-PodcastQ?node-id=0-1&t=h4lzXEVekgfCQO10-1",
@@ -76,145 +71,114 @@ export default function Portofolio() {
       image: "/project/simpro.png",
       desc: "Sistem Informasi Manajemen Proyek (SIMPRO) adalah aplikasi yang didesain untuk membantu perusahaan atau organisasi dalam manajemen proyek. Manajemen proyek melibatkan perencanaan, pelaksanaan, pemantauan, dan evaluasi kegiatan proyek ",
       link: "https://github.com/LutfianaDeka/UAS-PL-SIMPRO.git",
-      tool: ["Balsamiq", "C#", ".Net Framework", "Microsoft Access (SQL Query)"],
+      tool: [
+        "Balsamiq",
+        "C#",
+        ".Net Framework",
+        "Microsoft Access (SQL Query)",
+      ],
     },
   ];
 
   return (
-    <section className="bg-white py-12 relative ">
-      <div className="container mx-auto px-4 relative w-[90vw]">
-        <h2 className="text-xl font-bold text-center text-[#090035] mb-8">
-          Portofolio
-        </h2>
+    <section className="portofolio py-8">
+      <h2 className="text-xl font-semibold text-center text-[#090035] pb-8">
+        PORTOFOLIO
+      </h2>
 
-        {/* Navigasi Swiper */}
-        <div className="relative flex items-center">
-          {/* <div className="swiper-button-prev !text-[#090035] !left-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div> */}
-
-          {/* <Swiper
-            modules={[Navigation]}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="mySwiper w-full"
-          > */}
-          <Swiper
-            modules={[Pagination]}
-            pagination={{
-              clickable: true,
-              bulletClass: "swiper-pagination-bullet !bg-gray-300 !opacity-100",
-              bulletActiveClass: "!bg-[#090035] !opacity-100",
-            }}
-            spaceBetween={30}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-            className="mySwiper w-full t-4"
-          >
-            {projects.map((project, index) => (
-              <SwiperSlide key={index}>
-                <div className="box-porto bg-white flex flex-col shadow-lg border border-[#090035]/20 rounded overflow-hidden hover:shadow-xl transition-all duration-300 mb-8">
-                  <div className="gmbr relative w-full overflow-hidden p-2">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-46 object-contain border border-[#090035]/20 rounded"
-                    />
-                  </div>
-
-                  <div className="p-4 flex flex-col flex-grow justify-between">
-                    <h3 className="text-lg max-md:text-sm font-semibold text-[#090035] mb-2">
-                      {project.title}
-                    </h3>
-                    <a
-                      onClick={() => setSelectedProject(project)}
-                      className="text-sm max-md:text-xs font-medium text-[#090035] hover:underline cursor-pointer mt-4 inline-block"
-                    >
-                      View Detail Project →
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* <div className="swiper-button-next !text-[#090035] !right-[-40px] absolute top-1/2 -translate-y-1/2 z-10"></div> */}
-        </div>
-
-        {/* Popup Detail Project */}
-        {selectedProject && (
-          <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative animate-fadeIn mx-4">
-              <button
-                className="absolute top-1 right-2 text-xl text-gray-600 hover:text-black"
-                onClick={() => setSelectedProject(null)}
-              >
-                &times;
-              </button>
-
-              <div className="mb-4">
+      {/*
+        - grid-cols-1: di hp tampil 1 kolom ke bawah
+        - md:grid-cols-2: di tablet/laptop tampil 2 kolom (2-2)
+        - gap-8: jarak antar kartu sebesar 2rem
+      */}
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px] ">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="box-porto w-full bg-white flex flex-col shadow rounded-lg overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-500 cursor-pointer"
+            >
+              <div className="gmbr relative overflow-hidden h-[250px] shrink-0 w-full border-b border-[#090035]/10">
                 <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-48 object-contain rounded border border-[#090035]/20"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500  cursor-pointer"
                 />
-                {/* {selectedProject.video ? (
-                  <video
-                    src={selectedProject.video}
-                    controls
-                    className="w-full rounded border border-[#090035]/20"
-                  />
-                ) : (
-                  <img
-                    src={selectedProject.image}
-                    alt={selectedProject.title}
-                    className="w-full rounded border border-[#090035]/20"
-                  />
-                )} */}
               </div>
 
-              <h3 className="text-lg max-md:text-sm font-semibold text-[#090035] mb-2">
-                {selectedProject.title}
-              </h3>
-              <p className="text-gray-700 text-sm max-md:text-xs mb-3">
-                {selectedProject.desc}
-              </p>
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-lg font-medium text-[#090035] mb-2 line-clamp-2">
+                  {project.title}
+                </h3>
 
-              {/* ✅ Daftar Tools */}
-              <div className="flex flex-wrap gap-2 mb-3">
-                {selectedProject.tool.map((t, i) => (
-                  <span
-                    key={i}
-                    className="px-2 py-1 bg-[#090035]/10 text-[#090035] text-xs max-md:text-[10px] rounded-full border border-[#090035]"
-                  >
-                    {t}
-                  </span>
-                ))}
-              </div>
+                {/* menampilkan sedikit deskripsi agar tidak terlalu kosong */}
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                  {project.desc}
+                </p>
 
-              {selectedProject.link && selectedProject.link !== "#" && (
-                <a
-                  href={selectedProject.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm max-md:text-xs font-medium text-blue-[#090035] hover:underline"
+                <button
+                  onClick={() => setSelectedProject(project)}
+                  className="text-sm font-medium text-[#090035] hover:text-blue-700 mt-auto text-left inline-block transition-colors"
                 >
-                  Kunjungi Project →
-                </a>
-              )}
+                  View Detail Project →
+                </button>
+              </div>
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
+
+      {/* Popup Detail Project (tetap sama) */}
+      {selectedProject && (
+        <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-xl max-w-lg w-full p-6 relative animate-fadeIn mx-4 max-h-[90vh] overflow-y-auto">
+            <button
+              className="absolute top-2 right-4 text-2xl text-gray-600 hover:text-black"
+              onClick={() => setSelectedProject(null)}
+            >
+              &times;
+            </button>
+
+            <div className="mb-4 mt-2">
+              <img
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="w-full h-56 object-contain rounded border border-[#090035]/20"
+              />
+            </div>
+
+            <h3 className="text-xl max-md:text-lg font-semibold text-[#090035] mb-2">
+              {selectedProject.title}
+            </h3>
+            <p className="text-gray-700 text-sm max-md:text-xs mb-4">
+              {selectedProject.desc}
+            </p>
+
+            {/* Daftar Tools */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {selectedProject.tool.map((t, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 bg-[#090035]/10 text-[#090035] text-xs font-medium rounded-full border border-[#090035]/30"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            {selectedProject.link && selectedProject.link !== "#" && (
+              <a
+                href={selectedProject.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 px-4 py-2 bg-[#090035] text-white text-sm font-medium rounded hover:bg-blue-900 transition-colors"
+              >
+                Kunjungi Website
+              </a>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
