@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-9999 bg-[var(--blue)] border-b border-indigo-200">
+      <div className="fixed top-0 left-0 right-0 z-[9999] bg-[var(--blue)] border-b border-indigo-200">
         <header className="header flex max-w-6xl mx-auto items-center h-20 max-md:h-16 justify-between px-6 lg:px-12">
           <div className="logo cursor-pointer" onClick={() => navigate("/")}>
             <h1 className="logoName text-white text-2xl max-md:text-lg font-bold italic">
@@ -52,14 +52,14 @@ function Navbar() {
               onClick={(e) => handleNavClick(e, "home")}
               className="hover:text-indigo-200 transition-all"
             >
-              Home
+              Beranda
             </a>
             <a
               href="#about"
               onClick={(e) => handleNavClick(e, "about")}
               className="hover:text-indigo-200 transition-all"
             >
-              About
+              Tentang Saya
             </a>
             <a
               href="#portofolio"
@@ -80,7 +80,7 @@ function Navbar() {
               onClick={(e) => handleNavClick(e, "footer")}
               className="hover:text-indigo-200 transition-all"
             >
-              Contact
+              Kontak
             </a>
           </nav>
 
@@ -99,47 +99,48 @@ function Navbar() {
       {isSidebarOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9996]"
             onClick={closeSidebar}
-          ></div>
-          <div className="md:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-2xl z- transition-all duration-300">
-            <nav className="flex flex-col pt-24 text-[var(--blue)] font-semibold">
-              <a
-                className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
-                href="#home"
-                onClick={(e) => handleNavClick(e, "home")}
-              >
-                Home
-              </a>
-              <a
-                className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
-                href="#about"
-                onClick={(e) => handleNavClick(e, "about")}
-              >
-                About
-              </a>
-              <a
-                className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
-                href="#portofolio"
-                onClick={(e) => handleNavClick(e, "portofolio")}
-              >
-                Portofolio
-              </a>
-              <a
-                className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
-                href="#pengalaman"
-                onClick={(e) => handleNavClick(e, "pengalaman")}
-              >
-                Pengalaman
-              </a>
-              <a
-                className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
-                href="#footer"
-                onClick={(e) => handleNavClick(e, "footer")}
-              >
-                Contact
-              </a>
-            </nav>
+          >
+            <div className="md:hidden fixed top-0 right-0 h-full w-2/3 bg-white shadow-2xl z- transition-all duration-300">
+              <nav className="flex flex-col pt-20 text-[var(--blue)] font-semibold">
+                <a
+                  className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
+                  href="#home"
+                  onClick={(e) => handleNavClick(e, "home")}
+                >
+                  Home
+                </a>
+                <a
+                  className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
+                  href="#about"
+                  onClick={(e) => handleNavClick(e, "about")}
+                >
+                  About
+                </a>
+                <a
+                  className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
+                  href="#portofolio"
+                  onClick={(e) => handleNavClick(e, "portofolio")}
+                >
+                  Portofolio
+                </a>
+                <a
+                  className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
+                  href="#pengalaman"
+                  onClick={(e) => handleNavClick(e, "pengalaman")}
+                >
+                  Pengalaman
+                </a>
+                <a
+                  className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
+                  href="#footer"
+                  onClick={(e) => handleNavClick(e, "footer")}
+                >
+                  Contact
+                </a>
+              </nav>
+            </div>
           </div>
         </>
       )}

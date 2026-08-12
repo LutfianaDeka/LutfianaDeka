@@ -31,14 +31,6 @@ export default function Pengalaman() {
         "Mendampingi mahasiswa dalam praktik analisis data dan pemodelan prediktif menggunakan algoritma machine learning.",
     },
     {
-      title: "Amicta Amikom 2025",
-      institusi: "Universitas Amikom Yogyakarta",
-      picture: "/pengalaman/20250430_111225.jpg",
-      waktu: "2025",
-      description:
-        "Membantu mahasiswa memahami konsep dasar pemrograman web menggunakan HTML, CSS, dan JavaScript.",
-    },
-    {
       title: "Praktik Komneg",
       institusi: "Universitas Amikom Yogyakarta",
       picture: "/pengalaman/20250430_111225.jpg",
@@ -46,45 +38,12 @@ export default function Pengalaman() {
       description:
         "Mendampingi mahasiswa dalam praktik analisis data dan pemodelan prediktif menggunakan algoritma machine learning.",
     },
-
-    {
-      title: "Amicta Amikom 2025",
-      institusi: "Universitas Amikom Yogyakarta",
-      picture: "/pengalaman/20250430_111225.jpg",
-      waktu: "2025",
-      description:
-        "Membantu mahasiswa memahami konsep dasar pemrograman web menggunakan HTML, CSS, dan JavaScript.",
-    },
-    {
-      title: "Praktik Komneg",
-      institusi: "Universitas Amikom Yogyakarta",
-      picture: "/pengalaman/20250430_111225.jpg",
-      waktu: "2024 - 2025",
-      description:
-        "Mendampingi mahasiswa dalam praktik analisis data dan pemodelan prediktif menggunakan algoritma machine learning.",
-    },
-
-    {
-      title: "Amicta Amikom 2025",
-      institusi: "Universitas Amikom Yogyakarta",
-      picture: "/pengalaman/20250430_111225.jpg",
-      waktu: "2025",
-      description:
-        "Membantu mahasiswa memahami konsep dasar pemrograman web menggunakan HTML, CSS, dan JavaScript.",
-    },
-    {
-      title: "Praktik Komneg",
-      institusi: "Universitas Amikom Yogyakarta",
-      picture: "/pengalaman/20250430_111225.jpg",
-      waktu: "2024 - 2025",
-      description:
-        "Mendampingi mahasiswa dalam praktik analisis data dan pemodelan prediktif menggunakan algoritma machine learning.",
-    },
+    
   ];
 
   return (
-    <section className="pengalaman py-8">
-      <h2 className="text-xl font-semibold text-center text-[#090035] pb-8">
+    <section className="pengalaman pb-8">
+      <h2 className="text-xl max-md:text-base font-semibold text-center text-[#090035] pb-8">
         PENGALAMAN
       </h2>
 
@@ -131,7 +90,7 @@ export default function Pengalaman() {
                     <img
                       src={item.picture}
                       alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500  hover:shadow-lg hover:scale-105"
                     />
                   </div>
 
@@ -141,11 +100,11 @@ export default function Pengalaman() {
                       onClick={() =>
                         navigate("/detail-pengalaman", { state: item })
                       }
-                      className="text-md font-medium text-[#090035] leading-tight mb-1 line-clamp-2 transition-colors duration-300 group-hover/card:text-blue-600"
+                      className="text-base max-md:text-sm font-medium text-[#090035] leading-tight mb-1 line-clamp-2 transition-colors duration-300 group-hover/card:text-blue-600"
                     >
                       {item.title}
                     </h3>
-                    <span className="text-sm text-slate-500 ">
+                    <span className="text-sm max-md:text-xs text-slate-500 ">
                       {item.waktu} • {item.institusi}
                     </span>
                   </div>
@@ -155,7 +114,7 @@ export default function Pengalaman() {
           </Swiper>
 
           {/* tombol next */}
-          <button className="custom-next absolute -right-5 top-[35%] -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.15)] border border-gray-100 hidden lg:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer text-gray-600 hover:text-black">
+          <button className="custom-next absolute -right-5 top-[35%] -translate-y-1/2 z-20 w-10 h-10 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.15)] border border-gray-100 hidden lg:flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer text-gray-600 hover:text-black [&.swiper-button-disabled]:!hidden">
             <svg
               width="20"
               height="20"

@@ -40,7 +40,7 @@ export default function Home() {
       {/* Teks Intro */}
       <div className="intro text-white ml-10 max-md:mx-0 z-10 max-md:text-center">
         <p className="text-2xl font-extralight max-md:text-base max-md:pt-8 max-xs:pt-2 max-xs:text-xs cursor-pointer">
-          Hello, It's me
+          Hello, Saya
         </p>
         <h2 className="text-6xl font-bold pt-6 max-md:pt-4 max-md:text-2xl max-xs:pt-2 max-xs:text-sm cursor-pointer">
           Lutfiana Deka Nurhayati
@@ -90,12 +90,12 @@ export default function Home() {
           {/* Primary CTA: Arahkan ke section project/kontak */}
           <a
             href="#portofolio" // Ganti dengan ID section tujuanmu
-            className="relative group inline-flex items-center justify-center gap-2 
+            className="relative text-lg max-md:text-sm group inline-flex items-center justify-center gap-2 
       bg-white text-[var(--blue)] font-semibold py-1 px-4 rounded-lg 
       shadow-[var(--blue)] transition-all duration-300 
       hover:scale-105 hover:bg-indigo-200"
           >
-            <i className="bi bi-rocket-takeoff relative z-10 text-lg"></i>
+            <i className="bi bi-rocket-takeoff relative z-10"></i>
             <span className="relative z-10">Lihat Karya</span>
           </a>
 
@@ -103,12 +103,12 @@ export default function Home() {
           <a
             href="/Resume.pdf"
             download="RESUME LUTFIANA.pdf"
-            className="relative group inline-flex items-center justify-center gap-2 
+            className="relative text-lg max-md:text-sm group inline-flex items-center justify-center gap-2 
       bg-transparent border-2 border-white text-white font-semibold py-1 px-4 rounded-lg 
       transition-all duration-300 
       hover:scale-105 hover:bg-white hover:text-[var(--blue)]"
           >
-            <i className="bi bi-download relative z-10 text-lg"></i>
+            <i className="bi bi-download relative z-10"></i>
             <span className="relative z-10">Resume</span>
           </a>
         </div>
