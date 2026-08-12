@@ -68,7 +68,7 @@ export default function Portofolio() {
     },
     {
       title: "SIMPRO",
-      image: "/project/simpro.png",
+      image: "/project/simpro2.png",
       desc: "Sistem Informasi Manajemen Proyek (SIMPRO) adalah aplikasi yang didesain untuk membantu perusahaan atau organisasi dalam manajemen proyek. Manajemen proyek melibatkan perencanaan, pelaksanaan, pemantauan, dan evaluasi kegiatan proyek ",
       link: "https://github.com/LutfianaDeka/UAS-PL-SIMPRO.git",
       tool: [
@@ -81,8 +81,8 @@ export default function Portofolio() {
   ];
 
   return (
-    <section className="portofolio py-8">
-      <h2 className="text-xl font-semibold text-center text-[#090035] pb-8">
+    <section className="portofolio" id="portofolio">
+      <h2 className="text-xl max-md:text-base font-semibold text-center text-[#090035] pb-8">
         PORTOFOLIO
       </h2>
 
@@ -96,29 +96,29 @@ export default function Portofolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="box-porto w-full bg-white flex flex-col shadow rounded-lg overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-500 cursor-pointer"
+              className="box-porto w-full bg-white flex flex-col shadow rounded-lg overflow-hidden hover:shadow-lg transition-all duration-500 cursor-pointer"
             >
-              <div className="gmbr relative overflow-hidden h-[250px] shrink-0 w-full border-b border-[#090035]/10">
+              <div className="gmbr relative overflow-hidden aspect-[17/8] shrink-0 w-full border-b border-[#090035]/10">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500  cursor-pointer"
+                  className="w-full h-full object-cover hover:scale-105  transition-transform duration-500  cursor-pointer"
                 />
               </div>
 
               <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-lg font-medium text-[#090035] mb-2 line-clamp-2">
+                <h3 className="text-lg max-md:text-base font-medium text-[#090035] mb-2 line-clamp-2">
                   {project.title}
                 </h3>
 
                 {/* menampilkan sedikit deskripsi agar tidak terlalu kosong */}
-                <p className="text-sm text-gray-600 mb-4 line-clamp-2">
+                <p className="text-sm max-md:text-xs text-gray-600 mb-4 line-clamp-2">
                   {project.desc}
                 </p>
 
                 <button
                   onClick={() => setSelectedProject(project)}
-                  className="text-sm font-medium text-[#090035] hover:text-blue-700 mt-auto text-left inline-block transition-colors"
+                  className="text-sm max-md:text-xs font-medium text-[#090035] hover:text-blue-700 mt-auto text-left inline-block transition-colors"
                 >
                   View Detail Project →
                 </button>
@@ -147,7 +147,7 @@ export default function Portofolio() {
               />
             </div>
 
-            <h3 className="text-xl max-md:text-lg font-semibold text-[#090035] mb-2">
+            <h3 className="text-xl max-md:text-base font-semibold text-[#090035] mb-2">
               {selectedProject.title}
             </h3>
             <p className="text-gray-700 text-sm max-md:text-xs mb-4">
@@ -159,7 +159,7 @@ export default function Portofolio() {
               {selectedProject.tool.map((t, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-[#090035]/10 text-[#090035] text-xs font-medium rounded-full border border-[#090035]/30"
+                  className="px-3 py-1 bg-[#090035]/10 text-[#090035] text-xs max-md:text-[0.7rem] font-medium rounded-full border border-[#090035]/30"
                 >
                   {t}
                 </span>
@@ -171,7 +171,7 @@ export default function Portofolio() {
                 href={selectedProject.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-2 px-4 py-2 bg-[#090035] text-white text-sm font-medium rounded hover:bg-blue-900 transition-colors"
+                className="inline-block mt-2 px-4 py-2 bg-[#090035] text-white text-sm max-md:text-xs font-medium rounded hover:bg-blue-900 transition-colors"
               >
                 Kunjungi Website
               </a>

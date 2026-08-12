@@ -26,9 +26,9 @@
 }
 
 html {
+  scroll-padding-top: 94px;
   scroll-behavior: smooth;
 }
-
 /* 5. jadikan roboto font default */
 body {
   font-family: "pretendard variable", "roboto", sans-serif;

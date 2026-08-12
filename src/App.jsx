@@ -16,6 +16,7 @@ import Footer from "./component/footer";
 import Portofolio from "./component/portofolio";
 import Pengalaman from "./component/pengalaman";
 import DetailPengalaman from "./component/detailpengalaman";
+import Kontak from "./component/Kontak";
 
 // kita pisahkan isi routes ke komponen baru agar bisa menggunakan useLocation()
 function AnimatedRoutes() {
@@ -41,6 +42,9 @@ function AnimatedRoutes() {
                 </section>
                 <section id="pengalaman">
                   <Pengalaman />
+                </section>
+                <section id="kontak">
+                  <Kontak />
                 </section>
               </main>
               <Footer />
