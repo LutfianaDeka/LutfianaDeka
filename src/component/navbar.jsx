@@ -109,14 +109,14 @@ function Navbar() {
                   href="#home"
                   onClick={(e) => handleNavClick(e, "home")}
                 >
-                  Home
+                  Beranda
                 </a>
                 <a
                   className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
                   href="#about"
                   onClick={(e) => handleNavClick(e, "about")}
                 >
-                  About
+                  Tentang Saya
                 </a>
                 <a
                   className="px-8 py-4 border-b border-gray-100 hover:bg-indigo-50"
@@ -137,7 +137,7 @@ function Navbar() {
                   href="#footer"
                   onClick={(e) => handleNavClick(e, "footer")}
                 >
-                  Contact
+                  Kontak
                 </a>
               </nav>
             </div>
